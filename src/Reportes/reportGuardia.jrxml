@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a19aeeb-56fd-4b17-95d5-30d26e13fe27">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="85"/>
+	<style name="style1"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#BFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="78d3154f-8669-44d8-8e5b-afaef236ae28"/>
+	<parameter name="Cedula" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dato" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     personal.`ced_per` AS personal_ced_per,
+     personal.`nom_per` AS personal_nom_per,
+     personal.`ape_per` AS personal_ape_per,
+     personal.`ser_car_per` AS personal_ser_car_per,
+     personal.`sex_per` AS personal_sex_per,
+     personal.`alerg_per` AS personal_alerg_per,
+     personal.`grup_sang_per` AS personal_grup_sang_per,
+     personal.`unidad` AS personal_unidad,
+     personal.`grado` AS personal_grado,
+     personal.`categoria` AS personal_categoria,
+     personal.`componente` AS personal_componente,
+     personal.`fec_nac_per` AS personal_fec_nac_per,
+     personal.`est_civ_per` AS personal_est_civ_per,
+     personal.`id_prom` AS personal_id_prom,
+     personal.`id_car` AS personal_id_car,
+     personal.`ser_armp` AS personal_ser_armp,
+     personal.`fec_ing_sis_per` AS personal_fec_ing_sis_per,
+     personal.`tlf_cel_per` AS personal_tlf_cel_per,
+     personal.`tlf_otr_per` AS personal_tlf_otr_per,
+     personal.`tlf_casa_per` AS personal_tlf_casa_per,
+     personal.`tlf_trab_per` AS personal_tlf_trab_per,
+     personal.`mail_per` AS personal_mail_per,
+     personal.`direcc_per` AS personal_direcc_per,
+     personal.`centro_vot_per` AS personal_centro_vot_per,
+     personal.`ubic_vot_per` AS personal_ubic_vot_per
+FROM
+     `personal` personal
+
+SELECT ced_per FROM personal WHERE campo = $P{dato}]]>
+	</queryString>
+	<field name="personal_ced_per" class="java.lang.Integer"/>
+	<field name="personal_nom_per" class="java.lang.String"/>
+	<field name="personal_ape_per" class="java.lang.String"/>
+	<field name="personal_ser_car_per" class="java.lang.Integer"/>
+	<field name="personal_sex_per" class="java.lang.String"/>
+	<field name="personal_alerg_per" class="java.lang.String"/>
+	<field name="personal_grup_sang_per" class="java.lang.String"/>
+	<field name="personal_unidad" class="java.lang.String"/>
+	<field name="personal_grado" class="java.lang.String"/>
+	<field name="personal_categoria" class="java.lang.String"/>
+	<field name="personal_componente" class="java.lang.String"/>
+	<field name="personal_fec_nac_per" class="java.lang.String"/>
+	<field name="personal_est_civ_per" class="java.lang.String"/>
+	<field name="personal_id_prom" class="java.lang.Integer"/>
+	<field name="personal_id_car" class="java.lang.Integer"/>
+	<field name="personal_ser_armp" class="java.lang.String"/>
+	<field name="personal_fec_ing_sis_per" class="java.lang.String"/>
+	<field name="personal_tlf_cel_per" class="java.lang.String"/>
+	<field name="personal_tlf_otr_per" class="java.lang.String"/>
+	<field name="personal_tlf_casa_per" class="java.lang.String"/>
+	<field name="personal_tlf_trab_per" class="java.lang.String"/>
+	<field name="personal_mail_per" class="java.lang.String"/>
+	<field name="personal_direcc_per" class="java.lang.String"/>
+	<field name="personal_centro_vot_per" class="java.lang.String"/>
+	<field name="personal_ubic_vot_per" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement x="143" y="0" width="250" height="89" uuid="8455ba1d-23ec-43e6-bcaf-4ba48ed5a387"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[REPUBLICA BOLIVARIANA DE VENEZUELA
+MINISTERIO DEL PODER POPULAR PARA LA DEFENSA
+AVIACIÓN MILITAR  BOLIVARIANA
+COMANDO AÉREO DE OPERACIONES 
+CENTRO DE ENTRENAMIENTO AEREO
+COMANDO
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="102" width="250" height="18" uuid="39c7ffc0-c442-427e-b7e9-5b98dee53d39"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[ORDEN N°]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="72" height="18" uuid="0a29f92a-44d4-43b6-969e-a3dc9a60fba8"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[A.-Situacion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="18" width="97" height="18" uuid="e9ac9b43-7833-4b4a-a6c8-87362c8a077e"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[B.-Transcripciones:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="36" width="181" height="18" uuid="130e1369-b062-40c4-b76d-39a398972c21"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[PENSAMIENTO DEL COMANDANTE SUPREMO:}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="74" width="231" height="18" uuid="23701137-cbdc-4e0a-97e7-2a1ad09096ee"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[REGLAMENTO DE CASTIGO DISCIPLINARIO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="123" width="231" height="18" uuid="06fe24aa-589b-4075-813b-2d1da8d59ec5"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[ C.- SERVICIO DIURNO PARA EL DÍA.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="369" splitType="Stretch">
+			<elementGroup/>
+			<staticText>
+				<reportElement x="0" y="13" width="262" height="30" uuid="a4e9afec-b03f-46d6-81f4-8371bff0c9a5"/>
+				<text><![CDATA[OFICIAL DE DÍA DEL CEA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="43" width="262" height="33" uuid="0f0ba623-c0a5-4f88-a0f9-5de88b5668ef"/>
+				<text><![CDATA[OFICIAL SUPERVISOR DE OPERACIONES AEREAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="262" height="30" uuid="cb8eacad-fc76-4dc8-b6ad-d36801aed9cf"/>
+				<text><![CDATA[OFICIAL SUPERVISOR DE VUELO BASE LIBERTADOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="106" width="262" height="30" uuid="3820ea2a-3aed-4d4c-b3de-7f9390ff81bf"/>
+				<text><![CDATA[OFICIAL SUPERVISOR DE VUELO BASE SUCRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="136" width="262" height="23" uuid="095a706b-037e-424b-a760-3d02365e9287"/>
+				<text><![CDATA[INSPECCION G7]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

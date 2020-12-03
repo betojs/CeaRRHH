@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3c04e54d-d03a-40d6-8d9d-80d74ec99464">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="campo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Buscar" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     auditoria.`id_aud` AS auditoria_id_aud,
+     auditoria.`usu_us` AS auditoria_usu_us,
+     auditoria.`acc_aud` AS auditoria_acc_aud,
+     auditoria.`camp_aud` AS auditoria_camp_aud,
+     auditoria.`fecc_aud` AS auditoria_fecc_aud,
+     auditoria.`hora_aud` AS auditoria_hora_aud
+FROM
+     `auditoria` auditoria
+]]>
+	</queryString>
+	<field name="auditoria_id_aud" class="java.lang.Integer"/>
+	<field name="auditoria_usu_us" class="java.lang.String"/>
+	<field name="auditoria_acc_aud" class="java.lang.String"/>
+	<field name="auditoria_camp_aud" class="java.lang.String"/>
+	<field name="auditoria_fecc_aud" class="java.lang.String"/>
+	<field name="auditoria_hora_aud" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="137" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="91" width="553" height="33" uuid="c7ecbd1f-c78f-4677-a8f2-49a870900508"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Auditoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="91" uuid="c65ca807-0171-4c20-a6be-e7f61e42833b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[REPUBLICA BOLIVARIANA DE VENEZUELA
+MINISTERIO DEL PODER POPULAR PARA LA DEFENSA
+AVIACIÓN MILITAR  BOLIVARIANA
+COMANDO AÉREO DE OPERACIONES 
+CENTRO DE ENTRENAMIENTO AEREO
+COMANDO
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="5ff344d7-cdbd-47eb-a90b-f6af3d66f79e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="69" height="15" uuid="c0ea1e82-ecc7-435e-9978-214345bf25b9"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="65" y="19" width="92" height="15" uuid="f44bb63b-428a-4f26-8740-bf64335e6741"/>
+				<text><![CDATA[Usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="157" y="19" width="92" height="15" uuid="25937d0d-45cc-415b-85ae-aedc64c918de"/>
+				<text><![CDATA[Acción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="249" y="19" width="92" height="15" uuid="a3c1ce75-497f-45fa-b251-8f9628b90aa3"/>
+				<text><![CDATA[Campo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="341" y="19" width="92" height="15" uuid="28113396-39d7-495a-97d1-7e418546dee3"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="433" y="19" width="92" height="15" uuid="2e10a4df-2ce1-417f-ae3e-0b4c5b2564d9"/>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="c7f49646-51d4-424a-a3cc-2d12121b1964"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="69" height="15" uuid="93dde047-4b81-4e43-afe7-4c695902408d"/>
+				<textFieldExpression><![CDATA[$F{auditoria_id_aud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="65" y="0" width="92" height="15" uuid="31e6fb6e-0528-44d3-90c7-d492799fae28"/>
+				<textFieldExpression><![CDATA[$F{auditoria_usu_us}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="157" y="0" width="92" height="15" uuid="103764d0-599d-4957-8fbd-41b8ddd4bccf"/>
+				<textFieldExpression><![CDATA[$F{auditoria_acc_aud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="249" y="0" width="92" height="15" uuid="40e75d7f-7a65-4761-a3c3-18de485df323"/>
+				<textFieldExpression><![CDATA[$F{auditoria_camp_aud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="341" y="0" width="92" height="15" uuid="d7703ddc-bde1-4cc0-afc3-b00b71bd1e57"/>
+				<textFieldExpression><![CDATA[$F{auditoria_fecc_aud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="433" y="0" width="92" height="15" uuid="df829b4f-229b-4d28-9f1a-24c21bb558e3"/>
+				<textFieldExpression><![CDATA[$F{auditoria_hora_aud}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="0763a773-dc37-4481-a51b-8cf8faaab984"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="0a4b1d55-ee84-42d4-a0da-da5c00a01d80"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="31bdf675-74b8-4f6c-9c07-a2af9481e2bf"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="f3687a85-e034-47f0-aaee-6e949db64199"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

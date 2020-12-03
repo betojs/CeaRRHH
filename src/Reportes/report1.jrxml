@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a0137d12-8712-42e0-9153-b18bf8ea050a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cursos.`id_curso` AS cursos_id_curso,
+     cursos.`ced_per` AS cursos_ced_per,
+     cursos.`tipo` AS cursos_tipo,
+     cursos.`nombre` AS cursos_nombre,
+     cursos.`instituto` AS cursos_instituto,
+     cursos.`duracion` AS cursos_duracion,
+     cursos.`desde` AS cursos_desde,
+     cursos.`hasta` AS cursos_hasta
+FROM
+     `cursos` cursos]]>
+	</queryString>
+	<field name="cursos_id_curso" class="java.lang.Integer"/>
+	<field name="cursos_ced_per" class="java.lang.Integer"/>
+	<field name="cursos_tipo" class="java.lang.String"/>
+	<field name="cursos_nombre" class="java.lang.String"/>
+	<field name="cursos_instituto" class="java.lang.String"/>
+	<field name="cursos_duracion" class="java.lang.String"/>
+	<field name="cursos_desde" class="java.lang.String"/>
+	<field name="cursos_hasta" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="596104ac-92a5-458a-8ace-f0b5226f6e18"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Green Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="100" y="46" width="174" height="22" uuid="710b83b9-310a-41b0-9f90-0f871e9c04ea"/>
+				<text><![CDATA[Leaf Green SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="65e8eb46-b9d8-4cb3-abe6-4739aa160afe"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="69" height="15" uuid="d7ba168c-ccdb-4453-bd2b-a60c3d0d4a2c"/>
+				<text><![CDATA[cursos_id_curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="69" y="19" width="69" height="15" uuid="b400da78-9580-4f6c-93f1-bb9166c4c5d7"/>
+				<text><![CDATA[cursos_ced_per]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="69" height="15" uuid="48ee05c4-e206-4d91-b3db-6d2c81bc9be3"/>
+				<text><![CDATA[cursos_tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="207" y="19" width="69" height="15" uuid="96876187-b585-41ba-a107-73390e4a6040"/>
+				<text><![CDATA[cursos_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="69" height="15" uuid="3d586be3-488a-4a0c-80bb-f06f5fb2dff3"/>
+				<text><![CDATA[cursos_instituto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="345" y="19" width="69" height="15" uuid="9f0b051f-12ef-41c1-bcd1-e861fee6b47d"/>
+				<text><![CDATA[cursos_duracion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="69" height="15" uuid="a61c07bf-272c-46a7-a4b0-68348d03f05a"/>
+				<text><![CDATA[cursos_desde]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="483" y="19" width="69" height="15" uuid="00c41067-88de-4e10-9f6b-445e42fb2b3f"/>
+				<text><![CDATA[cursos_hasta]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="64a048b2-70d3-4b86-b0a0-ba68a307769c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="69" height="15" uuid="ad58bdfa-8a8d-48d5-9924-f3919bb25713"/>
+				<textFieldExpression><![CDATA[$F{cursos_id_curso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="69" y="0" width="69" height="15" uuid="671ab1a6-9839-4fda-b44e-2a5629b37e1d"/>
+				<textFieldExpression><![CDATA[$F{cursos_ced_per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="69" height="15" uuid="582eb4aa-30c0-4d32-8591-17ec2df23e1a"/>
+				<textFieldExpression><![CDATA[$F{cursos_tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="207" y="0" width="69" height="15" uuid="ee36baf8-d683-4bd5-a5a8-14571086da0d"/>
+				<textFieldExpression><![CDATA[$F{cursos_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="69" height="15" uuid="ab9f165c-76fc-460e-9a35-4f7a731c97fc"/>
+				<textFieldExpression><![CDATA[$F{cursos_instituto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="345" y="0" width="69" height="15" uuid="1d00e841-184e-4d68-ab28-2838a51097ba"/>
+				<textFieldExpression><![CDATA[$F{cursos_duracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="69" height="15" uuid="f92e2e32-c731-45c6-93e1-68d395a2d575"/>
+				<textFieldExpression><![CDATA[$F{cursos_desde}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="483" y="0" width="69" height="15" uuid="d36f534a-d119-42d6-baa6-976e4aa4e4e8"/>
+				<textFieldExpression><![CDATA[$F{cursos_hasta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="a2e52829-175d-45b0-b928-374f04d4fb4e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="eb6ab4bc-c13a-4cfb-8442-5d786a0bd9b4"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="7e5e72ee-af7b-4f51-84c5-90a07a39fed7"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="679ecbec-c60d-41bf-8f20-585ca0464169"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
